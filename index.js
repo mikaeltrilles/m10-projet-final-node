@@ -4,6 +4,7 @@ const app = express();
 const port = process.env.PORT || 6868;
 const mongoose = require('mongoose');
 const User = require('./models/User');
+const Absence = require('./models/Absence');
 mongoose.set('strictQuery', false)
 mongoose.connect('mongodb://127.0.0.1:27017/gdadb')
 app.use(express.json())
