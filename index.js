@@ -27,6 +27,34 @@ db.once('open', function () {
 
 
 
+
+
+//!SECTION : ADMINISTRATEUR
+
+//TODO - Creation d'un employé par l'administrateur POST
+
+//TODO - Creer les jours RTT Employeur POST
+
+//TODO - Maintenir les jour jours fériés avec l'API Axios: https://www.data.gouv.fr/fr/datasets/jours-feries-en-france/
+
+
+
+//!SECTION : EMPLOYE
+
+//TODO - Récupérer liste des absence GET find
+
+//TODO - Saisir demande de congé POST
+
+
+
+//!SECTION : MANAGER
+
+//TODO - Validation de congé d'un employé PUT
+
+//TODO - Recuperer liste employé present et absent sur une semaine choisi GET find by ...
+
+
+
 app.listen(port, () => {
   console.log(`Express app listening at http://localhost:${port}`);
 })

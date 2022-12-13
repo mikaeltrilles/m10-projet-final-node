@@ -1,4 +1,4 @@
-//TODO - schema moongose User
+//NOTE - schema moongose User
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -30,6 +30,20 @@ const UserSchema = new Schema({
     default: new Date(),
   },
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const User = mongoose.model('User', UserSchema);
 module.exports = User;
