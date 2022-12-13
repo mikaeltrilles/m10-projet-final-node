@@ -1,0 +1,19 @@
+{
+  "name": "m10-projet-final-node",
+  "version": "1.0.0",
+  "description": "Backend gestion de congés",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikaeltrilles/m10-projet-final-node.git"
+  },
+  "author": "Liting - Jerome - Mikael",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/mikaeltrilles/m10-projet-final-node/issues"
+  },
+  "homepage": "https://github.com/mikaeltrilles/m10-projet-final-node#readme"
+}
