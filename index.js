@@ -28,21 +28,40 @@ db.once('open', function () {
   console.log("connecté à Mongoose")
 });
 
+const bcrypt = require('bcrypt');
+
+const jwt = require('jsonwebtoken');
+
 
 //!SECTION : Connection All
 
 app.post('/login', async (req, res) => {
   try {
     const user = await User.findOne({ emailEmploye: req.body.email })
-    // console.log(req.body);
-    // console.log(user);
-    if (user.mdp == req.body.mdp) {
-      res.status(200).json({ isLog: true })
+    if (user) {
+      bcrypt.compare(req.body.mdp, user.mdp, function (err, result) {
+        if (result) {
+          console.log(result);
+          const token = jwt.sign(
+            { data: user._id },
+            process.env.TOKEN_SECRET,
+            { expiresIn: '12h' }
+          );
+          console.log('le token est : ' + token);
+          // res.status(200).json({ isLog: true })
+          res.status(200).json({ isLog: true, userId: user._id, token })
+        } else {
+          res.status(403).json({ err })
+
+        }
+      });
     } else {
-      throw new Error('Email ou mot de passe incorrect')
+      console.log('Pas de user')
+
     }
   } catch (error) {
-    res.send('Email ou mot de passe incorrect')
+    console.log('pb de coonection')
+
   }
 })
 
@@ -70,12 +89,12 @@ app.post('/createUser', async (req, res) => {
 
 //TODO - Récupérer liste des absences GET find
 // app.get('/absences', async (req, res) => {
-  // try {
-    // const absence = await Absence.find()
-    // res.status(200).json(absence)
-  // } catch (error) {
-    // res.status(400).json({ message: error.message })
-  // }
+// try {
+// const absence = await Absence.find()
+// res.status(200).json(absence)
+// } catch (error) {
+// res.status(400).json({ message: error.message })
+// }
 // })
 
 
@@ -87,16 +106,16 @@ app.post('/createUser', async (req, res) => {
 
 //TODO - Validation de congé d'un employé PUT
 // app.put('/absences/:id', async (req, res) => {
-  // try {
-    // const absence = await Absence.findByIdAndUpdate
-      // (req
-        // .params
-        // .id
-        // .req.body, { new: true })
-    // res.status(200).json(absence)
-  // } catch (error) {
-    // res.status(400).json({ message: error.message })
-  // }
+// try {
+// const absence = await Absence.findByIdAndUpdate
+// (req
+// .params
+// .id
+// .req.body, { new: true })
+// res.status(200).json(absence)
+// } catch (error) {
+// res.status(400).json({ message: error.message })
+// }
 // })
 
 
