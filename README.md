@@ -1,5 +1,7 @@
 # m10-projet-final-node
 
+[![wakatime](https://wakatime.com/badge/user/933ebfa6-42e4-4a54-b3fc-658e9f1ab22f/project/96f0224d-02ac-43fc-b796-9db81c3ae88a.svg)](https://wakatime.com/badge/user/933ebfa6-42e4-4a54-b3fc-658e9f1ab22f/project/96f0224d-02ac-43fc-b796-9db81c3ae88a)
+
 Projet Backend de formation NodeJS Full Stack
 
 [![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)](https://www.javascriptcom/)
