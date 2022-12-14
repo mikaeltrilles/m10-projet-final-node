@@ -6,7 +6,10 @@ const mongoose = require('mongoose');
 const User = require('./models/User');
 const Absence = require('./models/Absence');
 mongoose.set('strictQuery', false)
-mongoose.connect('mongodb://127.0.0.1:27017/gdadb')
+mongoose.connect('mongodb://localhost:27017/gdadb', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
@@ -26,12 +29,35 @@ db.once('open', function () {
 });
 
 
+//!SECTION : Connection All
 
+app.post('/login', async (req, res) => {
+  try {
+    const user = await User.findOne({ emailEmploye: req.body.email })
+    // console.log(req.body);
+    // console.log(user);
+    if (user.mdp == req.body.mdp) {
+      res.status(200).json({ isLog: true })
+    } else {
+      throw new Error('Email ou mot de passe incorrect')
+    }
+  } catch (error) {
+    res.send('Email ou mot de passe incorrect')
+  }
+})
 
 
 //!SECTION : ADMINISTRATEUR
 
 //TODO - Creation d'un employé par l'administrateur POST
+app.post('/createUser', async (req, res) => {
+  try {
+    const user = await User.create(req.body)
+    res.status(200).json(user)
+  } catch (error) {
+    res.status(400).json({ message: error.message })
+  }
+})
 
 //TODO - Creer les jours RTT Employeur POST
 
@@ -39,9 +65,19 @@ db.once('open', function () {
 
 
 
+
 //!SECTION : EMPLOYE
 
-//TODO - Récupérer liste des absence GET find
+//TODO - Récupérer liste des absences GET find
+// app.get('/absences', async (req, res) => {
+  // try {
+    // const absence = await Absence.find()
+    // res.status(200).json(absence)
+  // } catch (error) {
+    // res.status(400).json({ message: error.message })
+  // }
+// })
+
 
 //TODO - Saisir demande de congé POST
 
@@ -50,6 +86,19 @@ db.once('open', function () {
 //!SECTION : MANAGER
 
 //TODO - Validation de congé d'un employé PUT
+// app.put('/absences/:id', async (req, res) => {
+  // try {
+    // const absence = await Absence.findByIdAndUpdate
+      // (req
+        // .params
+        // .id
+        // .req.body, { new: true })
+    // res.status(200).json(absence)
+  // } catch (error) {
+    // res.status(400).json({ message: error.message })
+  // }
+// })
+
 
 //TODO - Recuperer liste employé present et absent sur une semaine choisi GET find by ...
 

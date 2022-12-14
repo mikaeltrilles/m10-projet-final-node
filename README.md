@@ -1,18 +1,63 @@
 # m10-projet-final-node
 
-## Initialisation Server Node
+Projet Backend de formation NodeJS Full Stack
+
+[![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)](https://www.javascriptcom/)
+
+---------
+
+## Initialisation du Projet Server Node
 
 ```bash
 npm init
 ````
 
-```bash
-npm i express
-````
+Json du projet
+
+```json
+{
+  "name": "m10-projet-final-node",
+  "version": "1.0.0",
+  "description": "Backend gestion de congés",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikaeltrilles/
+m10-projet-final-node.git"
+  }
+}
+```
+
+## Installation d'Express
+
+- Documentation : [ExpressJS](https://expressjs.com/fr/starter/installing.html)
 
 ```bash
-npm i mongoose
+npm install express --save
 ````
+
+## Installation de Mongoose
+
+- Documentation : [MongooseJS](https://mongoosejs.com/)
+
+```bash
+npm install mongoose --save
+````
+
+```javascript
+const mongoose = require('mongoose');
+const User = require('./models/User');
+mongoose.set('strictQuery', false)
+mongoose.connect('mongodb://localhost:27017/gdadb')
+```
+
+## Installation Cors pour les requêtes multi-origines
+
+- Documentation [cors](https://expressjs.com/en/resources/middleware/cors.html)
 
 ```bash
 npm i cors
@@ -20,13 +65,35 @@ npm i cors
 
 Documentation [DotEnv](https://www.npmjs.com/package/dotenv)
 
+## Installation de DotEnv pour las variables d'environement
+
+- Documentation [dotenv](https://github.com/motdotla/dotenv)
+
 ```bash
-npm i dotenv
+npm install dotenv --save
 ````
 
+## Installation de jsonwebtoken pour le token de session
 
+- Documentation [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
 
+```bash
+npm install jsonwebtoken
+```
 
+## Installation de mongoose validator pour l'unicité des emails
+
+```bash
+npm install --save mongoose-unique-validator
+```
+
+```js
+const uniqueValidator = require('mongoose-unique-validator');
+// Code Schema
+mySchema.plugin(uniqueValidator);
+```
+
+## Modele User en BDD
 
 ```JSON
 /** 
