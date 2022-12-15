@@ -31,24 +31,3 @@ bcrypt.hash(myPlaintextPassword, saltRounds, function (err, hash) {
     updatedAt: new Date(),
   }, (error, user) => { console.log(error, user) });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

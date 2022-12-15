@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const User = require('./models/User');
 const Absence = require('./models/Absence');
 mongoose.set('strictQuery', false)
-mongoose.connect('mongodb://localhost:27017/gdadb', {
+mongoose.connect('mongodb://127.0.0.1:27017/gdadb', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -88,18 +88,34 @@ app.post('/createUser', async (req, res) => {
 //!SECTION : EMPLOYE
 
 //TODO - Récupérer liste des absences GET find
-// app.get('/absences', async (req, res) => {
-// try {
-// const absence = await Absence.find()
-// res.status(200).json(absence)
-// } catch (error) {
-// res.status(400).json({ message: error.message })
-// }
-// })
+app.get('/absences', async (req, res) => {
+  try {
+
+    const absence = await Absence.find()
+    res.status(200).json(absence)
+    res.end()
+  } catch (error) {
+    res.status(400).json({ message: error.message })
+  }
+
+})
 
 
-//TODO - Saisir demande de congé POST
+// Saisir demande de congé POST
 
+app.post('/creationAbsence', async (req, res) => {
+  await Absence.create(req.body, (error, absence) => { console.log(error, absence) });
+  res.send('ok')
+})
+
+// Suppresion d'un congé
+
+app.delete('/delete/:id', async (req, res) => {
+  const id = req.params.id
+  console.log(id);
+  await Absence.deleteOne({ _id: id })
+  res.end()
+});
 
 
 //!SECTION : MANAGER
