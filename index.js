@@ -117,6 +117,12 @@ app.delete('/delete/:id', async (req, res) => {
   res.end()
 });
 
+app.put('/:id',  async (req, res) => {
+  let doc = await Absence.findOneAndUpdate({ _id: req.params.id }, {...req.body});
+  console.log(doc)
+  res.status(201).json({message :'congé modifié'})
+});
+
 
 //!SECTION : MANAGER
 
