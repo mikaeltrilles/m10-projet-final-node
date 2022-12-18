@@ -38,30 +38,28 @@ const jwt = require('jsonwebtoken');
 app.post('/login', async (req, res) => {
   try {
     const user = await User.findOne({ emailEmploye: req.body.email })
-    if (user) {
-      bcrypt.compare(req.body.mdp, user.mdp, function (err, result) {
-        if (result) {
-          console.log(result);
-          const token = jwt.sign(
-            { data: user._id },
-            process.env.TOKEN_SECRET,
-            { expiresIn: '12h' }
-          );
-          console.log('le token est : ' + token);
-          // res.status(200).json({ isLog: true })
-          res.status(200).json({ isLog: true, userId: user._id, token })
-        } else {
-          res.status(403).json({ err })
-
-        }
-      });
-    } else {
-      console.log('Pas de user')
-
+    if (!user) {
+      res.status(400).json({ message: 'mauvaise requête' })
     }
-  } catch (error) {
-    console.log('pb de coonection')
 
+    const valid = await bcrypt.compare(req.body.mdp, user.mdp);
+    if (!valid) {
+      res.status(403).json({ message: 'non authorisé' });
+      return
+    }
+    const token = jwt.sign(
+      { data: user._id, role: user.role },
+      process.env.TOKEN_SECRET,
+      { expiresIn: '12h' }
+    );
+    res.status(200).json({
+      isLog: true,
+      userId: user._id,
+      role: user.role,
+      token
+    })
+  } catch (error) {
+    console.log(error)
   }
 })
 
@@ -117,10 +115,9 @@ app.delete('/delete/:id', async (req, res) => {
   res.end()
 });
 
-app.put('/:id',  async (req, res) => {
-  let doc = await Absence.findOneAndUpdate({ _id: req.params.id }, {...req.body});
-  console.log(doc)
-  res.status(201).json({message :'congé modifié'})
+app.put('/:id', async (req, res) => {
+  await Absence.findOneAndUpdate({ _id: req.params.id }, { ...req.body });
+  res.status(201).json({ message: 'congé modifié' })
 });
 
 
