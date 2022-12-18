@@ -39,7 +39,7 @@ app.post('/login', async (req, res) => {
   try {
     const user = await User.findOne({ emailEmploye: req.body.email })
     if (!user) {
-      res.status(400).json({ message: 'mauvaise requête' })
+      return res.status(400).json({ message: 'mauvaise requête' })
     }
 
     const valid = await bcrypt.compare(req.body.mdp, user.mdp);
