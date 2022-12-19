@@ -9,6 +9,10 @@ const AbsenceSchema = new Schema({
   motif: String,
   statut: String,
   idEmploye: String,
+  departement:String,
+  nom:String,
+  prenom:String,
+  jours:Array
 })
 
 const Absence = mongoose.model('Absence', AbsenceSchema);

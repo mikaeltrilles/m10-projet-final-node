@@ -18,12 +18,7 @@ const UserSchema = new Schema({
   mdp: String,
   // isAbsent: [],
   isActive: Boolean,
-  departement: {
-    section: String,
-    service: String,
-    pole: String,
-    numero: Number,
-  },
+  departement: String,
   equipe: String,
   role: String,
   photo: String,

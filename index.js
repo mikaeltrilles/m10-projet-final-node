@@ -56,6 +56,9 @@ app.post('/login', async (req, res) => {
       isLog: true,
       userId: user._id,
       role: user.role,
+      departement: user.departement,
+      nom:user.nom,
+      prenom:user.prenom,
       token
     })
   } catch (error) {
@@ -85,25 +88,47 @@ app.post('/createUser', async (req, res) => {
 
 //!SECTION : EMPLOYE
 
-//TODO - Récupérer liste des absences GET find
+//TODO - Récupérer liste des absences GET find 
+//  list absence pour un utilisateur qui est logé
 app.get('/absences', async (req, res) => {
-  try {
+  try{
+    const token = req.headers.authorization.split(' ')[1]
+    const decodedToken = jwt.verify(token,process.env.TOKEN_SECRET);
+  
+    const absences = await Absence.find({idEmploye:decodedToken.data});
+    res.status(200).json(absences);
+  }catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+})
 
-    const absence = await Absence.find()
-    res.status(200).json(absence)
-    res.end()
+// Route pour ROLE_MANAGER
+app.get('/validation',async (req, res) => {
+  try {
+    const token = req.headers.authorization.split(' ')[1]
+    const decodedToken = jwt.verify(token,process.env.TOKEN_SECRET);
+    const user = await User.find({_id:decodedToken.data});
+    const absences = await Absence.find({departement:user[0].departement});
+
+    // envoyer que les absences dont status ===  'EN_ATTENTE_VALIDATION' ou 'REJETEE'
+    const newAbsences = absences.filter((abs)=> abs.statut === 'EN_ATTENTE_VALIDATION' || abs.statut === 'REJETEE' )
+    
+    res.status(200).json(newAbsences)
   } catch (error) {
     res.status(400).json({ message: error.message })
   }
 
 })
 
+// list absences pour tous les salariés d'un manager
+
 
 // Saisir demande de congé POST
 
 app.post('/creationAbsence', async (req, res) => {
   await Absence.create(req.body, (error, absence) => { console.log(error, absence) });
-  res.send('ok')
+    // penser à faire changer status faire un setTimeout pour actualiser le status de INITIAL à EN_Attent
+    res.status(201).json({ message: 'congé cré' })
 })
 
 // Suppresion d'un congé
@@ -116,9 +141,19 @@ app.delete('/delete/:id', async (req, res) => {
 });
 
 app.put('/:id', async (req, res) => {
+  // prende en compte role
   await Absence.findOneAndUpdate({ _id: req.params.id }, { ...req.body });
+  // const token = req.headers.authorization.split(' ')[1]
+  // const decodedToken = jwt.verify(token,process.env.TOKEN_SECRET);
+
   res.status(201).json({ message: 'congé modifié' })
 });
+
+// TODO
+app.put('/validation/:id', async(req, res) => {
+  const absences = await Absence.findOneAndUpdate({ _id: req.params.id }, {statut: 'status envoyé par front'});
+  res.status(201).json({ message: 'congé validé ou rejeté' })
+})
 
 
 //!SECTION : MANAGER
