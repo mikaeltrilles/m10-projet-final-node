@@ -12,7 +12,8 @@ const AbsenceSchema = new Schema({
   departement:String,
   nom:String,
   prenom:String,
-  jours:Array
+  jours:Array,
+  createdAt:Date
 })
 
 const Absence = mongoose.model('Absence', AbsenceSchema);

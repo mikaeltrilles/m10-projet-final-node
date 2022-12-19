@@ -5,6 +5,8 @@ const port = process.env.PORT || 6868;
 const mongoose = require('mongoose');
 const User = require('./models/User');
 const Absence = require('./models/Absence');
+const moment = require('moment'); // require
+
 mongoose.set('strictQuery', false)
 mongoose.connect('mongodb://127.0.0.1:27017/gdadb', {
   useNewUrlParser: true,
@@ -125,14 +127,28 @@ app.get('/validation',async (req, res) => {
 
 // Saisir demande de congé POST
 
+
 app.post('/creationAbsence', async (req, res) => {
-  await Absence.create(req.body, (error, absence) => { console.log(error, absence) });
-    // penser à faire changer status faire un setTimeout pour actualiser le status de INITIAL à EN_Attent
+
+   await Absence.create(req.body, (error, absence) => { 
+    const createdAt = new moment(absence.createdAt)
+    const updateStatutAt = new moment({hour:23, minute: 59})
+    const duration = moment.duration(updateStatutAt.diff(createdAt ))
+    let timer
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      console.log("Retardée d'une seconde.");
+      Absence.updateOne({_id:absence._id}, {statut:'EN_ATTENTE_VALIDATION'}, function(err, res) {
+        if(err) console.log(err)
+      });
+    }, 3000) // duration._milliseconds
+    console.log(timer)
+    // penser à enlever 
+  });
     res.status(201).json({ message: 'congé cré' })
 })
 
 // Suppresion d'un congé
-
 app.delete('/delete/:id', async (req, res) => {
   const id = req.params.id
   console.log(id);
