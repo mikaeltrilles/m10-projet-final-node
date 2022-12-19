@@ -167,8 +167,13 @@ app.put('/:id', async (req, res) => {
 
 // TODO
 app.put('/validation/:id', async(req, res) => {
-  const absences = await Absence.findOneAndUpdate({ _id: req.params.id }, {statut: 'status envoyé par front'});
-  res.status(201).json({ message: 'congé validé ou rejeté' })
+  await Absence.findOneAndUpdate({ _id: req.params.id }, {statut: req.body.data.statut});
+  if (req.body.data.statut === 'VALIDEE') {
+    res.status(201).json({ message: 'congé validé' })
+  }else{
+    res.status(201).json({ message: 'congé rejeté' })
+  }
+  
 })
 
 
