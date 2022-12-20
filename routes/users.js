@@ -45,4 +45,19 @@ router.post('/login', async (req, res) => {
     }
   })
 
+  router.get('/all', async (req, res) => {
+    try {
+      const users = await User.find()
+      const arr= users.map( user => {
+        return {
+          name: user.nom +' '+ user.prenom
+        }
+      })
+      
+      res.status(200).json(arr);
+    } catch (error) {
+      res.status(400).json({ message: error.message });
+    }
+  })
+
 module.exports = router
