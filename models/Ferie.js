@@ -1,5 +1,6 @@
 //TODO - schema moongose Ferie
 const mongoose = require('mongoose');
+const uniqueValidator = require('mongoose-unique-validator');
 const Schema = mongoose.Schema;
 
 const FerieSchema = new Schema({
@@ -13,7 +14,9 @@ commentaire: String,
 // jour: new Date(property).toLocaleDateString('fr-FR', { weekday: 'long' }),
 jour: String,
 type: String, // Ferie ou Rtt Attention lors de la création des jours via l'api, il faut que le type soit Férié
+year: String
 })
 
+FerieSchema.plugin(uniqueValidator);
 const Ferie = mongoose.model('Ferie', FerieSchema);
 module.exports = Ferie;
