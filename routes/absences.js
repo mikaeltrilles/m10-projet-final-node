@@ -19,6 +19,17 @@ router.get('/', async (req, res) => {
     }
   })
 
+  router.get('/all', async (req, res) => {
+    try {
+      const absences = await Absence.find();
+      res.status(200).json(absences);
+    } catch (error) {
+      res.status(400).json({ message: error.message });
+    }
+  })
+
+
+
 //LINK Saisir demande de congé POST
   router.post('/', async (req, res) => {
 
