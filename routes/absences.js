@@ -45,7 +45,7 @@ router.get('/', async (req, res) => {
     const id = req.params.id
     // console.log(id);
     await Absence.deleteOne({ _id: id })
-    res.end()
+    res.status(201).json({ message: 'congé supprimé' })
   });
 
   //LINK - Modification d'un congé
