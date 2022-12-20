@@ -6,22 +6,22 @@ const uniqueValidator = require('mongoose-unique-validator');
 const UserSchema = new Schema({
   nom: String,
   prenom: String,
-  dateNaissance: String,
-  adresse: String,
+  // dateNaissance: String,
+  // adresse: String,
   emailEmploye: {
     type: String,
     required: [true, "Veuillez fournir un e-mail !"],
     unique: [true, "E-mail existe déjà"],
   },
-  emailProfessionel: String, // firstLetter.prenom+nom$@societe.fr
-  telephone: String,
+  // emailProfessionel: String, // firstLetter.prenom+nom$@societe.fr
+  // telephone: String,
   mdp: String,
   // isAbsent: [],
-  isActive: Boolean,
+  isPresent: Boolean,
   departement: String,
-  equipe: String,
+  // equipe: String,
   role: String,
-  photo: String,
+  // photo: String,
   createdAt: {
     type: Date,
     default: new Date(),

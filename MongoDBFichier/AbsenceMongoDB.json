@@ -1,0 +1,542 @@
+[{
+  "_id": {
+    "$oid": "63a23952d7ebc7e481c55466"
+  },
+  "dateDebut": {
+    "$date": {
+      "$numberLong": "1672012800000"
+    }
+  },
+  "dateFin": {
+    "$date": {
+      "$numberLong": "1672358400000"
+    }
+  },
+  "type": "Congés Payés",
+  "motif": "CP Noel",
+  "statut": "EN_ATTENTE_VALIDATION",
+  "idEmploye": "63a2253c11ee1b2afc69395b",
+  "departement": "DEV",
+  "nom": "Paul",
+  "prenom": "MANAGER DEV",
+  "jours": [
+    "2022-12-26T00:00:00.000Z",
+    "2022-12-27T00:00:00.000Z",
+    "2022-12-28T00:00:00.000Z",
+    "2022-12-29T00:00:00.000Z",
+    "2022-12-30T00:00:00.000Z"
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671575890495"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a23a0bd7ebc7e481c5547b"
+  },
+  "dateDebut": {
+    "$date": {
+      "$numberLong": "1672012800000"
+    }
+  },
+  "dateFin": {
+    "$date": {
+      "$numberLong": "1672358400000"
+    }
+  },
+  "type": "Congés Payés",
+  "motif": "CP Noel",
+  "statut": "EN_ATTENTE_VALIDATION",
+  "idEmploye": "63a2253c11ee1b2afc693955",
+  "departement": "DEV",
+  "nom": "Benoit",
+  "prenom": "USER DEV",
+  "jours": [
+    "2022-12-26T00:00:00.000Z",
+    "2022-12-27T00:00:00.000Z",
+    "2022-12-28T00:00:00.000Z",
+    "2022-12-29T00:00:00.000Z",
+    "2022-12-30T00:00:00.000Z"
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671576075105"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a23a7cd7ebc7e481c55480"
+  },
+  "dateDebut": {
+    "$date": {
+      "$numberLong": "1669852800000"
+    }
+  },
+  "dateFin": {
+    "$date": {
+      "$numberLong": "1669939200000"
+    }
+  },
+  "type": "Congés Payés",
+  "motif": "",
+  "statut": "EN_ATTENTE_VALIDATION",
+  "idEmploye": "63a2253c11ee1b2afc693955",
+  "departement": "DEV",
+  "nom": "Benoit",
+  "prenom": "USER DEV",
+  "jours": [
+    "2022-12-01T00:00:00.000Z",
+    "2022-12-02T00:00:00.000Z"
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671576188559"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a23ac9d7ebc7e481c5548c"
+  },
+  "dateDebut": {
+    "$date": {
+      "$numberLong": "1672012800000"
+    }
+  },
+  "dateFin": {
+    "$date": {
+      "$numberLong": "1672358400000"
+    }
+  },
+  "type": "Congés Payés",
+  "motif": "",
+  "statut": "EN_ATTENTE_VALIDATION",
+  "idEmploye": "63a2253c11ee1b2afc693952",
+  "departement": "CDA",
+  "nom": "Mathieu",
+  "prenom": "MANAGER CDA",
+  "jours": [
+    "2022-12-26T00:00:00.000Z",
+    "2022-12-27T00:00:00.000Z",
+    "2022-12-28T00:00:00.000Z",
+    "2022-12-29T00:00:00.000Z",
+    "2022-12-30T00:00:00.000Z"
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671576265140"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a23b9ad7ebc7e481c554a0"
+  },
+  "dateDebut": {
+    "$date": {
+      "$numberLong": "1672012800000"
+    }
+  },
+  "dateFin": {
+    "$date": {
+      "$numberLong": "1672358400000"
+    }
+  },
+  "type": "Congés Payés",
+  "motif": "",
+  "statut": "EN_ATTENTE_VALIDATION",
+  "idEmploye": "63a2253c11ee1b2afc693958",
+  "departement": "ADMIN",
+  "nom": "Administrator",
+  "prenom": "MASTER",
+  "jours": [
+    "2022-12-26T00:00:00.000Z",
+    "2022-12-27T00:00:00.000Z",
+    "2022-12-28T00:00:00.000Z",
+    "2022-12-29T00:00:00.000Z",
+    "2022-12-30T00:00:00.000Z"
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671576474205"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a23c0cd7ebc7e481c554a8"
+  },
+  "dateDebut": {
+    "$date": {
+      "$numberLong": "1672012800000"
+    }
+  },
+  "dateFin": {
+    "$date": {
+      "$numberLong": "1672358400000"
+    }
+  },
+  "type": "Congés Payés",
+  "motif": "",
+  "statut": "EN_ATTENTE_VALIDATION",
+  "idEmploye": "63a2253c11ee1b2afc693961",
+  "departement": "DEV",
+  "nom": "Jean",
+  "prenom": "USER DEV",
+  "jours": [
+    "2022-12-26T00:00:00.000Z",
+    "2022-12-27T00:00:00.000Z",
+    "2022-12-28T00:00:00.000Z",
+    "2022-12-29T00:00:00.000Z",
+    "2022-12-30T00:00:00.000Z"
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671576588811"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a23c5cd7ebc7e481c554ac"
+  },
+  "dateDebut": {
+    "$date": {
+      "$numberLong": "1670198400000"
+    }
+  },
+  "dateFin": {
+    "$date": {
+      "$numberLong": "1670630400000"
+    }
+  },
+  "type": "Congé sans solde",
+  "motif": "Déménagement",
+  "statut": "EN_ATTENTE_VALIDATION",
+  "idEmploye": "63a2253c11ee1b2afc693961",
+  "departement": "DEV",
+  "nom": "Jean",
+  "prenom": "USER DEV",
+  "jours": [
+    "2022-12-05T00:00:00.000Z",
+    "2022-12-06T00:00:00.000Z",
+    "2022-12-07T00:00:00.000Z",
+    "2022-12-08T00:00:00.000Z",
+    "2022-12-09T00:00:00.000Z",
+    "2022-12-10T00:00:00.000Z"
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671576668724"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a23dfad7ebc7e481c554b8"
+  },
+  "dateDebut": {
+    "$date": {
+      "$numberLong": "1670803200000"
+    }
+  },
+  "dateFin": {
+    "$date": {
+      "$numberLong": "1671235200000"
+    }
+  },
+  "type": "Congés Payés",
+  "motif": "",
+  "statut": "EN_ATTENTE_VALIDATION",
+  "idEmploye": "63a2253c11ee1b2afc69396a",
+  "departement": "CDA",
+  "nom": "Marc",
+  "prenom": "USER CDA",
+  "jours": [
+    "2022-12-12T00:00:00.000Z",
+    "2022-12-13T00:00:00.000Z",
+    "2022-12-14T00:00:00.000Z",
+    "2022-12-15T00:00:00.000Z",
+    "2022-12-16T00:00:00.000Z",
+    "2022-12-17T00:00:00.000Z"
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671577082625"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a23e0dd7ebc7e481c554bc"
+  },
+  "dateDebut": {
+    "$date": {
+      "$numberLong": "1672012800000"
+    }
+  },
+  "dateFin": {
+    "$date": {
+      "$numberLong": "1672358400000"
+    }
+  },
+  "type": "Congés Payés",
+  "motif": "",
+  "statut": "EN_ATTENTE_VALIDATION",
+  "idEmploye": "63a2253c11ee1b2afc69396a",
+  "departement": "CDA",
+  "nom": "Marc",
+  "prenom": "USER CDA",
+  "jours": [
+    "2022-12-26T00:00:00.000Z",
+    "2022-12-27T00:00:00.000Z",
+    "2022-12-28T00:00:00.000Z",
+    "2022-12-29T00:00:00.000Z",
+    "2022-12-30T00:00:00.000Z"
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671577101138"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a23e34d7ebc7e481c554c2"
+  },
+  "dateDebut": {
+    "$date": {
+      "$numberLong": "1672012800000"
+    }
+  },
+  "dateFin": {
+    "$date": {
+      "$numberLong": "1672358400000"
+    }
+  },
+  "type": "Congés Payés",
+  "motif": "",
+  "statut": "EN_ATTENTE_VALIDATION",
+  "idEmploye": "63a2253c11ee1b2afc693964",
+  "departement": "DEV",
+  "nom": "Pierre",
+  "prenom": "USER DEV",
+  "jours": [
+    "2022-12-26T00:00:00.000Z",
+    "2022-12-27T00:00:00.000Z",
+    "2022-12-28T00:00:00.000Z",
+    "2022-12-29T00:00:00.000Z",
+    "2022-12-30T00:00:00.000Z"
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671577140438"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a23e45d7ebc7e481c554c6"
+  },
+  "dateDebut": {
+    "$date": {
+      "$numberLong": "1670198400000"
+    }
+  },
+  "dateFin": {
+    "$date": {
+      "$numberLong": "1670630400000"
+    }
+  },
+  "type": "Congés Payés",
+  "motif": "",
+  "statut": "EN_ATTENTE_VALIDATION",
+  "idEmploye": "63a2253c11ee1b2afc693964",
+  "departement": "DEV",
+  "nom": "Pierre",
+  "prenom": "USER DEV",
+  "jours": [
+    "2022-12-05T00:00:00.000Z",
+    "2022-12-06T00:00:00.000Z",
+    "2022-12-07T00:00:00.000Z",
+    "2022-12-08T00:00:00.000Z",
+    "2022-12-09T00:00:00.000Z",
+    "2022-12-10T00:00:00.000Z"
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671577157520"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a242d6d7ebc7e481c5551d"
+  },
+  "dateDebut": {
+    "$date": {
+      "$numberLong": "1669852800000"
+    }
+  },
+  "dateFin": {
+    "$date": {
+      "$numberLong": "1669939200000"
+    }
+  },
+  "type": "Congé sans solde",
+  "motif": "Lune de Miel",
+  "statut": "EN_ATTENTE_VALIDATION",
+  "idEmploye": "63a2253c11ee1b2afc693967",
+  "departement": "CDA",
+  "nom": "Jaco",
+  "prenom": "USER CDA",
+  "jours": [
+    "2022-12-01T00:00:00.000Z",
+    "2022-12-02T00:00:00.000Z"
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671578326603"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a242e3d7ebc7e481c55521"
+  },
+  "dateDebut": {
+    "$date": {
+      "$numberLong": "1670198400000"
+    }
+  },
+  "dateFin": {
+    "$date": {
+      "$numberLong": "1670544000000"
+    }
+  },
+  "type": "Congé sans solde",
+  "motif": "Lune de Miel",
+  "statut": "EN_ATTENTE_VALIDATION",
+  "idEmploye": "63a2253c11ee1b2afc693967",
+  "departement": "CDA",
+  "nom": "Jaco",
+  "prenom": "USER CDA",
+  "jours": [
+    "2022-12-05T00:00:00.000Z",
+    "2022-12-06T00:00:00.000Z",
+    "2022-12-07T00:00:00.000Z",
+    "2022-12-08T00:00:00.000Z",
+    "2022-12-09T00:00:00.000Z"
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671578339686"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a24307d7ebc7e481c55525"
+  },
+  "dateDebut": {
+    "$date": {
+      "$numberLong": "1670803200000"
+    }
+  },
+  "dateFin": {
+    "$date": {
+      "$numberLong": "1671148800000"
+    }
+  },
+  "type": "Congé sans solde",
+  "motif": "Lune de Miel",
+  "statut": "EN_ATTENTE_VALIDATION",
+  "idEmploye": "63a2253c11ee1b2afc693967",
+  "departement": "CDA",
+  "nom": "Jaco",
+  "prenom": "USER CDA",
+  "jours": [
+    "2022-12-12T00:00:00.000Z",
+    "2022-12-13T00:00:00.000Z",
+    "2022-12-14T00:00:00.000Z",
+    "2022-12-15T00:00:00.000Z",
+    "2022-12-16T00:00:00.000Z"
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671578375584"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a2431cd7ebc7e481c55529"
+  },
+  "dateDebut": {
+    "$date": {
+      "$numberLong": "1671408000000"
+    }
+  },
+  "dateFin": {
+    "$date": {
+      "$numberLong": "1671753600000"
+    }
+  },
+  "type": "Congé sans solde",
+  "motif": "Lune de Miel",
+  "statut": "EN_ATTENTE_VALIDATION",
+  "idEmploye": "63a2253c11ee1b2afc693967",
+  "departement": "CDA",
+  "nom": "Jaco",
+  "prenom": "USER CDA",
+  "jours": [
+    "2022-12-19T00:00:00.000Z",
+    "2022-12-20T00:00:00.000Z",
+    "2022-12-21T00:00:00.000Z",
+    "2022-12-22T00:00:00.000Z",
+    "2022-12-23T00:00:00.000Z"
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671578396060"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a24334d7ebc7e481c5552d"
+  },
+  "dateDebut": {
+    "$date": {
+      "$numberLong": "1672012800000"
+    }
+  },
+  "dateFin": {
+    "$date": {
+      "$numberLong": "1672358400000"
+    }
+  },
+  "type": "Congé sans solde",
+  "motif": "Lune de Miel",
+  "statut": "EN_ATTENTE_VALIDATION",
+  "idEmploye": "63a2253c11ee1b2afc693967",
+  "departement": "CDA",
+  "nom": "Jaco",
+  "prenom": "USER CDA",
+  "jours": [
+    "2022-12-26T00:00:00.000Z",
+    "2022-12-27T00:00:00.000Z",
+    "2022-12-28T00:00:00.000Z",
+    "2022-12-29T00:00:00.000Z",
+    "2022-12-30T00:00:00.000Z"
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671578420717"
+    }
+  },
+  "__v": 0
+}]

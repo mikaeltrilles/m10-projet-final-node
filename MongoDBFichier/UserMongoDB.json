@@ -1,0 +1,199 @@
+[{
+  "_id": {
+    "$oid": "63a2253c11ee1b2afc69395b"
+  },
+  "nom": "Paul",
+  "prenom": "MANAGER DEV",
+  "emailEmploye": "managerdev@gmail.com",
+  "mdp": "$2b$10$M4AnJ4vKJQUtWXegt78/2OVhtIVitpvgap/aRI6GWfJ.ZdC2IZAl.",
+  "isPresent": true,
+  "departement": "DEV",
+  "role": "ROLE_MANAGER",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671570748095"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671570748095"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a2253c11ee1b2afc693955"
+  },
+  "nom": "Benoit",
+  "prenom": "USER DEV",
+  "emailEmploye": "benoitdev@gmail.com",
+  "mdp": "$2b$10$rJFPlSYO5QEBtBKWLWkYCuduJsKRjZil65AELY6Y23uDhmwUcHJ4q",
+  "isPresent": true,
+  "departement": "DEV",
+  "role": "ROLE_USER",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671570748091"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671570748091"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a2253c11ee1b2afc693952"
+  },
+  "nom": "Mathieu",
+  "prenom": "MANAGER CDA",
+  "emailEmploye": "managercda@gmail.com",
+  "mdp": "$2b$10$RL/ULRJrva.CXU7D4C2C1OQgMzP3HfpMyj2BMh4Tt9O3F1BfjG9Ju",
+  "isPresent": true,
+  "departement": "CDA",
+  "role": "ROLE_MANAGER",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671570748079"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671570748079"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a2253c11ee1b2afc693958"
+  },
+  "nom": "Administrator",
+  "prenom": "MASTER",
+  "emailEmploye": "admin@gmail.com",
+  "mdp": "$2b$10$Y87nAq5hRoGXaz2Pp9sDSuIlBITdWt.vQ8aXNG.qWGqTIP5EnPivO",
+  "isPresent": true,
+  "departement": "ADMIN",
+  "role": "ROLE_ADMIN",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671570748093"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671570748093"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a2253c11ee1b2afc693961"
+  },
+  "nom": "Jean",
+  "prenom": "USER DEV",
+  "emailEmploye": "jeandev@gmail.com",
+  "mdp": "$2b$10$VZpQel9vqeKY9U4Lh2kc7OGFPvi1/6chc/1i8cAwJTae0UL1g9uC6",
+  "isPresent": true,
+  "departement": "DEV",
+  "role": "ROLE_USER",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671570748152"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671570748152"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a2253c11ee1b2afc69396a"
+  },
+  "nom": "Marc",
+  "prenom": "USER CDA",
+  "emailEmploye": "marccda@gmail.com",
+  "mdp": "$2b$10$6u178hzYQtMYVavVykuk0uV8OcqwAa8xZ5ap97QsjDNqMAAxU.nyK",
+  "isPresent": true,
+  "departement": "CDA",
+  "role": "ROLE_USER",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671570748159"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671570748159"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a2253c11ee1b2afc693964"
+  },
+  "nom": "Pierre",
+  "prenom": "USER DEV",
+  "emailEmploye": "pierredev@gmail.com",
+  "mdp": "$2b$10$vlhcGr2yfsiFjC6dnf8NsuCORIpwWAHkir1LdfkifMceS4inQByKW",
+  "isPresent": true,
+  "departement": "DEV",
+  "role": "ROLE_USER",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671570748155"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671570748155"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a2253c11ee1b2afc693967"
+  },
+  "nom": "Jaco",
+  "prenom": "USER CDA",
+  "emailEmploye": "jacocda@gmail.com",
+  "mdp": "$2b$10$i8BWRYFhbzFQOR58A1aRNejVb2vQ75SbOZyocsOekEDm6E3oTm80C",
+  "isPresent": true,
+  "departement": "CDA",
+  "role": "ROLE_USER",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671570748158"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671570748158"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a2253c11ee1b2afc693972"
+  },
+  "nom": "Simon",
+  "prenom": "USER CDA",
+  "emailEmploye": "simoncda@gmail.com",
+  "mdp": "$2b$10$0tmVWP5ldlNnxktZHMXPj.AhpOaATCqFmY9g/KFkkwODN1ZiL2RYK",
+  "isPresent": true,
+  "departement": "CDA",
+  "role": "ROLE_USER",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671570748224"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671570748224"
+    }
+  },
+  "__v": 0
+}]
